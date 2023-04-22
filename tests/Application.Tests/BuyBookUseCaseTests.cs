@@ -10,11 +10,11 @@ namespace Application.Tests;
 
 public class BuyBookUseCaseTests
 {
-    private Mock<IBookInfoServices> _bookInfoServices;
-    private Mock<IBuyBookOutputPort> _outputPort;
-    private IBuyBookUseCase _useCase;
-    private Fixture _fixture;
-    
+    private readonly Mock<IBookInfoServices> _bookInfoServices;
+    private readonly Fixture _fixture;
+    private readonly Mock<IBuyBookOutputPort> _outputPort;
+    private readonly IBuyBookUseCase _useCase;
+
     public BuyBookUseCaseTests()
     {
         var mocker = new AutoMocker();

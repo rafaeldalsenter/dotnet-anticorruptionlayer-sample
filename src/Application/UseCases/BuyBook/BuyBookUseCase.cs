@@ -7,14 +7,14 @@ internal class BuyBookUseCase : IBuyBookUseCase
 {
     private readonly IBookInfoServices _bookInfoServices;
     private readonly IBuyBookOutputPort _outputPort;
-    
+
     public BuyBookUseCase(IBookInfoServices bookInfoServices,
         IBuyBookOutputPort outputPort)
     {
         _bookInfoServices = bookInfoServices;
         _outputPort = outputPort;
     }
-    
+
     public async Task ExecuteAsync(string bookCode, CancellationToken cancellationToken)
     {
         var bookInfoDto = await _bookInfoServices.GetAsync(bookCode, cancellationToken);
@@ -24,9 +24,9 @@ internal class BuyBookUseCase : IBuyBookUseCase
             _outputPort.NotFound();
             return;
         }
-        
+
         // Continue...
-        
+
         _outputPort.Success();
     }
 }
