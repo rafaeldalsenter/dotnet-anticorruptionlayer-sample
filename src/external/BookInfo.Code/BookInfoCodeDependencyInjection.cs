@@ -5,6 +5,6 @@ namespace BookInfo.Code;
 
 public static class BookInfoCodeDependencyInjection
 {
-    public static IServiceCollection AddBookInfoParseCode(this IServiceCollection services) 
-        => services.AddScoped<IBookInfoParseCodeServices, BookInfoParseCodeServices>();
+    public static IServiceCollection AddBookInfoParseCode(this IServiceCollection services) =>
+        services.AddScoped<IBookInfoParseCodeServices, BookInfoParseCodeServices>();
 }

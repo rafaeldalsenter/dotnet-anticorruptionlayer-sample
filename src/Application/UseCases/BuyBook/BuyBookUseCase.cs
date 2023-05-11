@@ -17,6 +17,7 @@ internal class BuyBookUseCase : IBuyBookUseCase
 
     public async Task ExecuteAsync(string bookCode, CancellationToken cancellationToken)
     {
+        Console.WriteLine($"Application - Get info by {bookCode}");
         var bookInfoDto = await _bookInfoServices.GetAsync(bookCode, cancellationToken);
 
         if (bookInfoDto is null)

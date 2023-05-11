@@ -17,8 +17,10 @@ internal class BookInfoAclServices : IBookInfoServices
         _bookInfoParseCodeServices = bookInfoParseCodeServices;
     }
 
-    public Task<BookInfoDto?> GetAsync(string code, CancellationToken cancellationToken)
+    public async Task<BookInfoDto?> GetAsync(string code, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        Console.WriteLine($"AntiCorruptionLayer - Get info by {code}");
+        var newCode = await _bookInfoParseCodeServices.GetCodeAsync(code, cancellationToken);
+        return await _bookInfoNewServices.GetAsync(newCode, cancellationToken);
     }
 }

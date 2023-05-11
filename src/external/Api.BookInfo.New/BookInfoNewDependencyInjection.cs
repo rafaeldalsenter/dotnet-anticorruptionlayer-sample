@@ -5,6 +5,6 @@ namespace Api.BookInfo.New;
 
 public static class BookInfoNewDependencyInjection
 {
-    public static IServiceCollection AddBookInfoNew(this IServiceCollection services) 
-        => services.AddScoped<IBookInfoNewServices, BookInfoNewServices>();
+    public static IServiceCollection AddBookInfoNew(this IServiceCollection services) =>
+        services.AddScoped<IBookInfoNewServices, BookInfoNewServices>();
 }

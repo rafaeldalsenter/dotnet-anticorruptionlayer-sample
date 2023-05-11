@@ -7,8 +7,8 @@ namespace BookInfo.AntiCorruptionLayer;
 
 public static class BookInfoLegacyDependencyInjection
 {
-    public static IServiceCollection AddBookInfoLegacy(IServiceCollection services)
-        => services.AddBookInfoNew()
+    public static IServiceCollection AddBookInfoAcl(this IServiceCollection services) =>
+        services.AddBookInfoNew()
             .AddBookInfoParseCode()
             .AddScoped<IBookInfoServices, BookInfoAclServices>();
 }

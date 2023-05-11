@@ -7,6 +7,7 @@ internal class BookInfoLegacyServices : IBookInfoServices
 {
     public Task<BookInfoDto?> GetAsync(string code, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        Console.WriteLine($"LegacyAPI - Get info by {code}");
+        return Task.FromResult(default(BookInfoDto));
     }
 }

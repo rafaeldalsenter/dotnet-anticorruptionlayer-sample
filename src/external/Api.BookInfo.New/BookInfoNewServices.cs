@@ -7,6 +7,7 @@ internal class BookInfoNewServices : IBookInfoNewServices
 {
     public Task<BookInfoDto?> GetAsync(int id, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        Console.WriteLine($"NewAPI - Get info by {id}");
+        return Task.FromResult(default(BookInfoDto));
     }
 }

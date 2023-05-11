@@ -5,6 +5,6 @@ namespace Api.BookInfo.Legacy;
 
 public static class BookInfoLegacyDependencyInjection
 {
-    public static IServiceCollection AddBookInfoLegacy(IServiceCollection services) 
-        => services.AddScoped<IBookInfoServices, BookInfoLegacyServices>();
+    public static IServiceCollection AddBookInfoLegacy(this IServiceCollection services) =>
+        services.AddScoped<IBookInfoServices, BookInfoLegacyServices>();
 }
