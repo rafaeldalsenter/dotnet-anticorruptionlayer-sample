@@ -32,3 +32,4 @@ var services = new ServiceCollection()
 ## References
 
 - [Azure Architecture - Anti-corruption Layer pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/anti-corruption-layer)
+- [Clean Architecture (Robert Martin)](https://www.amazon.com.br/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164)
