@@ -25,7 +25,7 @@ To execute the project, a Console application was created where the execution is
 var services = new ServiceCollection()
     .AddBuyBookUseCase()
     .AddBuyBookOutputPort()
-    .AddBookInfoAcl(); // <- new API
+    .AddBookInfoAcl(); // <- new API (with anti-corruption layer)
 //.AddBookInfoLegacy();   <- Legacy API
 ```
 
