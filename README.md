@@ -14,11 +14,11 @@ The problema is this external service will start using the code pattern, integer
 
 The first structure of the App is connected to the BookInfo API project, where the identifier used is 'code' of type string
 
-<image>
+![image](https://github.com/rafaeldalsenter/dotnet-anticorruptionlayer-sample/assets/10137467/f057ec66-470d-4fdf-a327-403485787655)
 
 The new structure of the App is connected to the new BookInfo API, where it has the Anti-corruption layer intermediating, converting the codes. So, even with the API change, we managed to keep the Application layer intact
 
---
+![image](https://github.com/rafaeldalsenter/dotnet-anticorruptionlayer-sample/assets/10137467/982f9461-d925-4493-858a-79dee0917d6c)
 
 ### References
 
